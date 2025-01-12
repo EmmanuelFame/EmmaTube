@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Video Player with Playlist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="video-container">
+    <!-- Main Video Player -->
+    <div id="player-container" class="medium">
+      <video id="main-video" controls>
+        <source src="./videos/Prob Theeory1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <!-- View Buttons -->
+      <div class="view-buttons">
+        <button id="small-view">Small</button>
+        <button id="medium-view" class="active">Medium</button>
+        <button id="large-view">Full</button>
+      </div>
+    </div>
+
+    <!-- Playlist Section -->
+    <div class="playlist">
+      <div class="video-item" data-video-src="./videos/Arrangement.mp4">
+        <img src="./images/Arrangement.png" alt="Video 1 Thumbnail">
+        <p>Arrangement</p>
+      </div>
+      <div class="video-item" data-video-src="./videos/Permutation.mp4">
+        <img src="./images/Permutation.png" alt="Video 2 Thumbnail">
+        <p>Permutation</p>
+      </div>
+      <div class="video-item" data-video-src="./videos/Combinations.mp4">
+        <img src="./images/Combinations.png" alt="Video 3 Thumbnail">
+        <p>Video 3 Title</p>
+      </div>
+      <div class="video-item" data-video-src="./videos/Arrangement_with_repetition.mp4">
+        <img src="./images/Arrangement_with_repetition.png" alt="Video 3 Thumbnail">
+        <p>Arrangement_with_repetition</p>
+      </div>
+      <div class="video-item" data-video-src="./videos/Permutation_with_repetition.mp4">
+        <img src="./images/Permutation_with_repetition.png" alt="Video 3 Thumbnail">
+        <p>Permutation_with_repetition</p>
+      </div>
+      <div class="video-item" data-video-src="./videos/Combinations_with_repetition.mp4">
+        <img src="./images/Combinations_with_repetition.png" alt="Video 3 Thumbnail">
+        <p>Combinations_with_repetition</p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
