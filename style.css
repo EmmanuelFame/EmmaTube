@@ -34,7 +34,11 @@ body {
   }
   
   #player-container.medium video {
-    height: 350px;
+    width: 100%;  /* Ensure the video takes full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; 
+    max-height: 350px;
+
   }
   
   #player-container.large video {
@@ -107,7 +111,11 @@ body {
   @media (max-width: 768px) {
     .video-item img {
       max-width: 100px;
+
     }
+    .video-container {
+      width: 85%; /* Adjust width for medium devices */
+  }
   
     .video-item p {
       font-size: 0.8rem;
