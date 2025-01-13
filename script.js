@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const mainVideo = document.getElementById("main-video");
   const videoItems = document.querySelectorAll(".video-item");
 
-  // Ensure default size is medium
-  setSize("medium");
+  // Set the default size to 'small'
+  setSize("small");
 
   // Playlist video click event
   videoItems.forEach((item) => {
@@ -14,9 +14,13 @@ document.addEventListener("DOMContentLoaded", () => {
         mainVideo.src = videoSrc; // Update video source
 
         // Wait for the video to load, then play
-        mainVideo.addEventListener("loadeddata", () => {
-          mainVideo.play();
-        }, { once: true });
+        mainVideo.addEventListener(
+          "loadeddata",
+          () => {
+            mainVideo.play();
+          },
+          { once: true }
+        );
       }
     });
   });
@@ -32,18 +36,18 @@ function setSize(size) {
   const videoContainer = document.getElementById("player-container");
   const video = document.getElementById("main-video");
 
+  // Remove all size classes
+  videoContainer.className = size;
+
   if (size === "small") {
-    videoContainer.className = "small";
     video.style.width = "300px";
     video.style.height = "170px";
     exitFullscreen();
   } else if (size === "medium") {
-    videoContainer.className = "medium";
     video.style.width = "600px";
     video.style.height = "340px";
     exitFullscreen();
   } else if (size === "large") {
-    videoContainer.className = "large";
     if (video.requestFullscreen) {
       video.requestFullscreen();
     } else if (video.webkitRequestFullscreen) {
